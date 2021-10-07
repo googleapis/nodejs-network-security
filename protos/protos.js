@@ -8182,7 +8182,6 @@
              * @property {number} INPUT_ONLY=4 INPUT_ONLY value
              * @property {number} IMMUTABLE=5 IMMUTABLE value
              * @property {number} UNORDERED_LIST=6 UNORDERED_LIST value
-             * @property {number} NON_EMPTY_DEFAULT=7 NON_EMPTY_DEFAULT value
              */
             api.FieldBehavior = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -8193,7 +8192,6 @@
                 values[valuesById[4] = "INPUT_ONLY"] = 4;
                 values[valuesById[5] = "IMMUTABLE"] = 5;
                 values[valuesById[6] = "UNORDERED_LIST"] = 6;
-                values[valuesById[7] = "NON_EMPTY_DEFAULT"] = 7;
                 return values;
             })();
     
@@ -15266,7 +15264,6 @@
                             case 4:
                             case 5:
                             case 6:
-                            case 7:
                                 break;
                             }
                     }
@@ -15370,10 +15367,6 @@
                             case "UNORDERED_LIST":
                             case 6:
                                 message[".google.api.fieldBehavior"][i] = 6;
-                                break;
-                            case "NON_EMPTY_DEFAULT":
-                            case 7:
-                                message[".google.api.fieldBehavior"][i] = 7;
                                 break;
                             }
                     }
