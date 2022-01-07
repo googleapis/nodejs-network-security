@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://www.github.com/googleapis/nodejs-network-security/compare/v0.2.0...v1.0.0) (2022-01-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* updating metadata messages for all long running operations (#22)
+
+### Bug Fixes
+
+* updating metadata messages for all long running operations ([#22](https://www.github.com/googleapis/nodejs-network-security/issues/22)) ([1acfa08](https://www.github.com/googleapis/nodejs-network-security/commit/1acfa0889231ab28810ce7ef0ee0eaea89d7df67))
+
 ## 0.2.0 (2021-10-08)
 
 
