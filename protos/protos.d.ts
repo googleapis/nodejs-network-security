@@ -2589,105 +2589,105 @@ export namespace google {
                 namespace NetworkSecurity {
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|listAuthorizationPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#listAuthorizationPolicies}.
                      * @param error Error, if any
                      * @param [response] ListAuthorizationPoliciesResponse
                      */
                     type ListAuthorizationPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.ListAuthorizationPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|getAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#getAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] AuthorizationPolicy
                      */
                     type GetAuthorizationPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.AuthorizationPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|createAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#createAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|updateAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#updateAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|deleteAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#deleteAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|listServerTlsPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#listServerTlsPolicies}.
                      * @param error Error, if any
                      * @param [response] ListServerTlsPoliciesResponse
                      */
                     type ListServerTlsPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.ListServerTlsPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|getServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#getServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] ServerTlsPolicy
                      */
                     type GetServerTlsPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.ServerTlsPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|createServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#createServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|updateServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#updateServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|deleteServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#deleteServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|listClientTlsPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#listClientTlsPolicies}.
                      * @param error Error, if any
                      * @param [response] ListClientTlsPoliciesResponse
                      */
                     type ListClientTlsPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.ListClientTlsPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|getClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#getClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] ClientTlsPolicy
                      */
                     type GetClientTlsPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1beta1.ClientTlsPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|createClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#createClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateClientTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|updateClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#updateClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateClientTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity|deleteClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1beta1.NetworkSecurity#deleteClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -5945,9 +5945,6 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
-            /** FieldOptions unverifiedLazy */
-            unverifiedLazy?: (boolean|null);
-
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -5984,9 +5981,6 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
-
-            /** FieldOptions unverifiedLazy. */
-            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
@@ -7789,35 +7783,35 @@ export namespace google {
         namespace Operations {
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|listOperations}.
+             * Callback as used by {@link google.longrunning.Operations#listOperations}.
              * @param error Error, if any
              * @param [response] ListOperationsResponse
              */
             type ListOperationsCallback = (error: (Error|null), response?: google.longrunning.ListOperationsResponse) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|getOperation}.
+             * Callback as used by {@link google.longrunning.Operations#getOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
             type GetOperationCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|deleteOperation}.
+             * Callback as used by {@link google.longrunning.Operations#deleteOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type DeleteOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|cancelOperation}.
+             * Callback as used by {@link google.longrunning.Operations#cancelOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type CancelOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations|waitOperation}.
+             * Callback as used by {@link google.longrunning.Operations#waitOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
