@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/googleapis/nodejs-network-security/compare/v0.3.0...v1.0.0) (2022-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* update library to use Node 12 (#52)
+
+### Build System
+
+* update library to use Node 12 ([#52](https://github.com/googleapis/nodejs-network-security/issues/52)) ([2d31aff](https://github.com/googleapis/nodejs-network-security/commit/2d31affe02718b9b7c2cebcc21c9b865e78f4253))
+
 ## [0.3.0](https://github.com/googleapis/nodejs-network-security/compare/v0.2.0...v0.3.0) (2022-01-12)
 
 
