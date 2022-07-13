@@ -16,12 +16,13 @@
 // ** https://github.com/googleapis/synthtool **
 // ** All changes to this file may be overwritten. **
 
+import * as v1 from './v1';
 import * as v1beta1 from './v1beta1';
 
 const NetworkSecurityClient = v1beta1.NetworkSecurityClient;
 type NetworkSecurityClient = v1beta1.NetworkSecurityClient;
 
-export {v1beta1, NetworkSecurityClient};
-export default {v1beta1, NetworkSecurityClient};
+export {v1, v1beta1, NetworkSecurityClient};
+export default {v1, v1beta1, NetworkSecurityClient};
 import * as protos from '../protos/protos';
 export {protos};
