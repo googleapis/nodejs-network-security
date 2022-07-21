@@ -26,8 +26,8 @@ function main(name) {
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. A name of the AuthorizationPolicy to delete. Must be in the format
-   *  `projects/{project}/locations/{location}/authorizationPolicies/*`.
+   *  Required. A name of the AuthorizationPolicy to delete. Must be in the
+   *  format `projects/{project}/locations/{location}/authorizationPolicies/*`.
    */
   // const name = 'abc123'
 

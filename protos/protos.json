@@ -1333,7 +1333,7 @@
                           "id": 1,
                           "options": {
                             "(google.api.field_behavior)": "REQUIRED",
-                            "(google.api.resource_reference).type": "networksecurity.googleapis.com/AuthorizationPolicy"
+                            "(google.api.resource_reference).child_type": "networksecurity.googleapis.com/AuthorizationPolicy"
                           }
                         },
                         "authorizationPolicyId": {
@@ -1500,7 +1500,7 @@
                           "id": 1,
                           "options": {
                             "(google.api.field_behavior)": "REQUIRED",
-                            "(google.api.resource_reference).type": "networksecurity.googleapis.com/ClientTlsPolicy"
+                            "(google.api.resource_reference).child_type": "networksecurity.googleapis.com/ClientTlsPolicy"
                           }
                         },
                         "clientTlsPolicyId": {
@@ -2139,7 +2139,7 @@
                           "id": 1,
                           "options": {
                             "(google.api.field_behavior)": "REQUIRED",
-                            "(google.api.resource_reference).type": "networksecurity.googleapis.com/ServerTlsPolicy"
+                            "(google.api.resource_reference).child_type": "networksecurity.googleapis.com/ServerTlsPolicy"
                           }
                         },
                         "serverTlsPolicyId": {
