@@ -34,7 +34,6 @@ import {
 } from 'google-gax';
 
 import {Transform} from 'stream';
-import {RequestType} from 'google-gax/build/src/apitypes';
 import * as protos from '../../protos/protos';
 import jsonProtos = require('../../protos/protos.json');
 /**
@@ -507,7 +506,8 @@ export class NetworkSecurityClient {
       const apiCall = this._gaxModule.createApiCall(
         callPromise,
         this._defaults[methodName],
-        descriptor
+        descriptor,
+        this._opts.fallback
       );
 
       this.innerApiCalls[methodName] = apiCall;
@@ -1010,7 +1010,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.createAuthorizationPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.AuthorizationPolicy,
@@ -1157,7 +1157,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.updateAuthorizationPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.AuthorizationPolicy,
@@ -1299,7 +1299,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.deleteAuthorizationPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.protobuf.Empty,
@@ -1443,7 +1443,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.createServerTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.ServerTlsPolicy,
@@ -1587,7 +1587,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.updateServerTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.ServerTlsPolicy,
@@ -1725,7 +1725,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.deleteServerTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.protobuf.Empty,
@@ -1869,7 +1869,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.createClientTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.ClientTlsPolicy,
@@ -2013,7 +2013,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.updateClientTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.networksecurity.v1.ClientTlsPolicy,
@@ -2151,7 +2151,7 @@ export class NetworkSecurityClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.deleteClientTlsPolicy,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.protobuf.Empty,
@@ -2309,7 +2309,7 @@ export class NetworkSecurityClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAuthorizationPolicies.createStream(
-      this.innerApiCalls.listAuthorizationPolicies as gax.GaxCall,
+      this.innerApiCalls.listAuthorizationPolicies as GaxCall,
       request,
       callSettings
     );
@@ -2362,7 +2362,7 @@ export class NetworkSecurityClient {
     this.initialize();
     return this.descriptors.page.listAuthorizationPolicies.asyncIterate(
       this.innerApiCalls['listAuthorizationPolicies'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.networksecurity.v1.IAuthorizationPolicy>;
   }
@@ -2511,7 +2511,7 @@ export class NetworkSecurityClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listServerTlsPolicies.createStream(
-      this.innerApiCalls.listServerTlsPolicies as gax.GaxCall,
+      this.innerApiCalls.listServerTlsPolicies as GaxCall,
       request,
       callSettings
     );
@@ -2563,7 +2563,7 @@ export class NetworkSecurityClient {
     this.initialize();
     return this.descriptors.page.listServerTlsPolicies.asyncIterate(
       this.innerApiCalls['listServerTlsPolicies'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.networksecurity.v1.IServerTlsPolicy>;
   }
@@ -2712,7 +2712,7 @@ export class NetworkSecurityClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listClientTlsPolicies.createStream(
-      this.innerApiCalls.listClientTlsPolicies as gax.GaxCall,
+      this.innerApiCalls.listClientTlsPolicies as GaxCall,
       request,
       callSettings
     );
@@ -2764,7 +2764,7 @@ export class NetworkSecurityClient {
     this.initialize();
     return this.descriptors.page.listClientTlsPolicies.asyncIterate(
       this.innerApiCalls['listClientTlsPolicies'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.networksecurity.v1.IClientTlsPolicy>;
   }
