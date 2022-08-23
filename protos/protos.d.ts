@@ -150,6 +150,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for AuthorizationPolicy
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace AuthorizationPolicy {
@@ -248,6 +255,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for Rule
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
 
                     namespace Rule {
@@ -346,6 +360,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for Source
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
 
                         /** Properties of a Destination. */
@@ -454,6 +475,13 @@ export namespace google {
                              * @returns JSON object
                              */
                             public toJSON(): { [k: string]: any };
+
+                            /**
+                             * Gets the default type url for Destination
+                             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns The default type url
+                             */
+                            public static getTypeUrl(typeUrlPrefix?: string): string;
                         }
 
                         namespace Destination {
@@ -555,6 +583,13 @@ export namespace google {
                                  * @returns JSON object
                                  */
                                 public toJSON(): { [k: string]: any };
+
+                                /**
+                                 * Gets the default type url for HttpHeaderMatch
+                                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                                 * @returns The default type url
+                                 */
+                                public static getTypeUrl(typeUrlPrefix?: string): string;
                             }
                         }
                     }
@@ -667,6 +702,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListAuthorizationPoliciesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListAuthorizationPoliciesResponse. */
@@ -763,6 +805,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListAuthorizationPoliciesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetAuthorizationPolicyRequest. */
@@ -853,6 +902,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetAuthorizationPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CreateAuthorizationPolicyRequest. */
@@ -955,6 +1011,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateAuthorizationPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateAuthorizationPolicyRequest. */
@@ -1051,6 +1114,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateAuthorizationPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteAuthorizationPolicyRequest. */
@@ -1141,6 +1211,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteAuthorizationPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ClientTlsPolicy. */
@@ -1273,6 +1350,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ClientTlsPolicy
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListClientTlsPoliciesRequest. */
@@ -1375,6 +1459,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListClientTlsPoliciesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListClientTlsPoliciesResponse. */
@@ -1471,6 +1562,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListClientTlsPoliciesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetClientTlsPolicyRequest. */
@@ -1561,6 +1659,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetClientTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CreateClientTlsPolicyRequest. */
@@ -1663,6 +1768,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateClientTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateClientTlsPolicyRequest. */
@@ -1759,6 +1871,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateClientTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteClientTlsPolicyRequest. */
@@ -1849,6 +1968,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteClientTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GrpcEndpoint. */
@@ -1939,6 +2065,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GrpcEndpoint
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ValidationCA. */
@@ -2038,6 +2171,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ValidationCA
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CertificateProviderInstance. */
@@ -2128,6 +2268,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CertificateProviderInstance
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CertificateProvider. */
@@ -2227,6 +2374,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CertificateProvider
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an OperationMetadata. */
@@ -2353,6 +2507,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for OperationMetadata
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Represents a NetworkSecurity */
@@ -2589,105 +2750,105 @@ export namespace google {
                 namespace NetworkSecurity {
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listAuthorizationPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listAuthorizationPolicies}.
                      * @param error Error, if any
                      * @param [response] ListAuthorizationPoliciesResponse
                      */
                     type ListAuthorizationPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.ListAuthorizationPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] AuthorizationPolicy
                      */
                     type GetAuthorizationPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.AuthorizationPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteAuthorizationPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteAuthorizationPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteAuthorizationPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listServerTlsPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listServerTlsPolicies}.
                      * @param error Error, if any
                      * @param [response] ListServerTlsPoliciesResponse
                      */
                     type ListServerTlsPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.ListServerTlsPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] ServerTlsPolicy
                      */
                     type GetServerTlsPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.ServerTlsPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteServerTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteServerTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteServerTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listClientTlsPolicies}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listClientTlsPolicies}.
                      * @param error Error, if any
                      * @param [response] ListClientTlsPoliciesResponse
                      */
                     type ListClientTlsPoliciesCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.ListClientTlsPoliciesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] ClientTlsPolicy
                      */
                     type GetClientTlsPolicyCallback = (error: (Error|null), response?: google.cloud.networksecurity.v1.ClientTlsPolicy) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateClientTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateClientTlsPolicyCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteClientTlsPolicy}.
+                     * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteClientTlsPolicy}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
@@ -2824,6 +2985,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ServerTlsPolicy
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 namespace ServerTlsPolicy {
@@ -2916,6 +3084,13 @@ export namespace google {
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for MTLSPolicy
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
                     }
                 }
 
@@ -3019,6 +3194,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServerTlsPoliciesRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a ListServerTlsPoliciesResponse. */
@@ -3115,6 +3297,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ListServerTlsPoliciesResponse
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a GetServerTlsPolicyRequest. */
@@ -3205,6 +3394,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GetServerTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a CreateServerTlsPolicyRequest. */
@@ -3307,6 +3503,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for CreateServerTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of an UpdateServerTlsPolicyRequest. */
@@ -3403,6 +3606,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for UpdateServerTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
 
                 /** Properties of a DeleteServerTlsPolicyRequest. */
@@ -3493,6 +3703,13 @@ export namespace google {
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for DeleteServerTlsPolicyRequest
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
                 }
             }
 

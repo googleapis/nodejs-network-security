@@ -228,48 +228,55 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
-                                case 2:
-                                    message.description = reader.string();
-                                    break;
-                                case 3:
-                                    message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 4:
-                                    message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 5:
-                                    if (message.labels === $util.emptyObject)
-                                        message.labels = {};
-                                    var end2 = reader.uint32() + reader.pos;
-                                    key = "";
-                                    value = "";
-                                    while (reader.pos < end2) {
-                                        var tag2 = reader.uint32();
-                                        switch (tag2 >>> 3) {
-                                        case 1:
-                                            key = reader.string();
-                                            break;
-                                        case 2:
-                                            value = reader.string();
-                                            break;
-                                        default:
-                                            reader.skipType(tag2 & 7);
-                                            break;
-                                        }
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
                                     }
-                                    message.labels[key] = value;
-                                    break;
-                                case 6:
-                                    message.action = reader.int32();
-                                    break;
-                                case 7:
-                                    if (!(message.rules && message.rules.length))
-                                        message.rules = [];
-                                    message.rules.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.decode(reader, reader.uint32()));
-                                    break;
+                                case 2: {
+                                        message.description = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 4: {
+                                        message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 5: {
+                                        if (message.labels === $util.emptyObject)
+                                            message.labels = {};
+                                        var end2 = reader.uint32() + reader.pos;
+                                        key = "";
+                                        value = "";
+                                        while (reader.pos < end2) {
+                                            var tag2 = reader.uint32();
+                                            switch (tag2 >>> 3) {
+                                            case 1:
+                                                key = reader.string();
+                                                break;
+                                            case 2:
+                                                value = reader.string();
+                                                break;
+                                            default:
+                                                reader.skipType(tag2 & 7);
+                                                break;
+                                            }
+                                        }
+                                        message.labels[key] = value;
+                                        break;
+                                    }
+                                case 6: {
+                                        message.action = reader.int32();
+                                        break;
+                                    }
+                                case 7: {
+                                        if (!(message.rules && message.rules.length))
+                                            message.rules = [];
+                                        message.rules.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.decode(reader, reader.uint32()));
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -469,6 +476,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for AuthorizationPolicy
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.AuthorizationPolicy
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        AuthorizationPolicy.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.AuthorizationPolicy";
+                        };
+    
                         AuthorizationPolicy.Rule = (function() {
     
                             /**
@@ -576,16 +598,18 @@
                                 while (reader.pos < end) {
                                     var tag = reader.uint32();
                                     switch (tag >>> 3) {
-                                    case 1:
-                                        if (!(message.sources && message.sources.length))
-                                            message.sources = [];
-                                        message.sources.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Source.decode(reader, reader.uint32()));
-                                        break;
-                                    case 2:
-                                        if (!(message.destinations && message.destinations.length))
-                                            message.destinations = [];
-                                        message.destinations.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.decode(reader, reader.uint32()));
-                                        break;
+                                    case 1: {
+                                            if (!(message.sources && message.sources.length))
+                                                message.sources = [];
+                                            message.sources.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Source.decode(reader, reader.uint32()));
+                                            break;
+                                        }
+                                    case 2: {
+                                            if (!(message.destinations && message.destinations.length))
+                                                message.destinations = [];
+                                            message.destinations.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.decode(reader, reader.uint32()));
+                                            break;
+                                        }
                                     default:
                                         reader.skipType(tag & 7);
                                         break;
@@ -718,6 +742,21 @@
                                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                             };
     
+                            /**
+                             * Gets the default type url for Rule
+                             * @function getTypeUrl
+                             * @memberof google.cloud.networksecurity.v1.AuthorizationPolicy.Rule
+                             * @static
+                             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns {string} The default type url
+                             */
+                            Rule.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                if (typeUrlPrefix === undefined) {
+                                    typeUrlPrefix = "type.googleapis.com";
+                                }
+                                return typeUrlPrefix + "/google.cloud.networksecurity.v1.AuthorizationPolicy.Rule";
+                            };
+    
                             Rule.Source = (function() {
     
                                 /**
@@ -825,16 +864,18 @@
                                     while (reader.pos < end) {
                                         var tag = reader.uint32();
                                         switch (tag >>> 3) {
-                                        case 1:
-                                            if (!(message.principals && message.principals.length))
-                                                message.principals = [];
-                                            message.principals.push(reader.string());
-                                            break;
-                                        case 2:
-                                            if (!(message.ipBlocks && message.ipBlocks.length))
-                                                message.ipBlocks = [];
-                                            message.ipBlocks.push(reader.string());
-                                            break;
+                                        case 1: {
+                                                if (!(message.principals && message.principals.length))
+                                                    message.principals = [];
+                                                message.principals.push(reader.string());
+                                                break;
+                                            }
+                                        case 2: {
+                                                if (!(message.ipBlocks && message.ipBlocks.length))
+                                                    message.ipBlocks = [];
+                                                message.ipBlocks.push(reader.string());
+                                                break;
+                                            }
                                         default:
                                             reader.skipType(tag & 7);
                                             break;
@@ -955,6 +996,21 @@
                                  */
                                 Source.prototype.toJSON = function toJSON() {
                                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                                };
+    
+                                /**
+                                 * Gets the default type url for Source
+                                 * @function getTypeUrl
+                                 * @memberof google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Source
+                                 * @static
+                                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                                 * @returns {string} The default type url
+                                 */
+                                Source.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                    if (typeUrlPrefix === undefined) {
+                                        typeUrlPrefix = "type.googleapis.com";
+                                    }
+                                    return typeUrlPrefix + "/google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Source";
                                 };
     
                                 return Source;
@@ -1094,29 +1150,33 @@
                                     while (reader.pos < end) {
                                         var tag = reader.uint32();
                                         switch (tag >>> 3) {
-                                        case 1:
-                                            if (!(message.hosts && message.hosts.length))
-                                                message.hosts = [];
-                                            message.hosts.push(reader.string());
-                                            break;
-                                        case 2:
-                                            if (!(message.ports && message.ports.length))
-                                                message.ports = [];
-                                            if ((tag & 7) === 2) {
-                                                var end2 = reader.uint32() + reader.pos;
-                                                while (reader.pos < end2)
+                                        case 1: {
+                                                if (!(message.hosts && message.hosts.length))
+                                                    message.hosts = [];
+                                                message.hosts.push(reader.string());
+                                                break;
+                                            }
+                                        case 2: {
+                                                if (!(message.ports && message.ports.length))
+                                                    message.ports = [];
+                                                if ((tag & 7) === 2) {
+                                                    var end2 = reader.uint32() + reader.pos;
+                                                    while (reader.pos < end2)
+                                                        message.ports.push(reader.uint32());
+                                                } else
                                                     message.ports.push(reader.uint32());
-                                            } else
-                                                message.ports.push(reader.uint32());
-                                            break;
-                                        case 4:
-                                            if (!(message.methods && message.methods.length))
-                                                message.methods = [];
-                                            message.methods.push(reader.string());
-                                            break;
-                                        case 5:
-                                            message.httpHeaderMatch = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch.decode(reader, reader.uint32());
-                                            break;
+                                                break;
+                                            }
+                                        case 4: {
+                                                if (!(message.methods && message.methods.length))
+                                                    message.methods = [];
+                                                message.methods.push(reader.string());
+                                                break;
+                                            }
+                                        case 5: {
+                                                message.httpHeaderMatch = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch.decode(reader, reader.uint32());
+                                                break;
+                                            }
                                         default:
                                             reader.skipType(tag & 7);
                                             break;
@@ -1273,6 +1333,21 @@
                                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                                 };
     
+                                /**
+                                 * Gets the default type url for Destination
+                                 * @function getTypeUrl
+                                 * @memberof google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination
+                                 * @static
+                                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                                 * @returns {string} The default type url
+                                 */
+                                Destination.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                    if (typeUrlPrefix === undefined) {
+                                        typeUrlPrefix = "type.googleapis.com";
+                                    }
+                                    return typeUrlPrefix + "/google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination";
+                                };
+    
                                 Destination.HttpHeaderMatch = (function() {
     
                                     /**
@@ -1390,12 +1465,14 @@
                                         while (reader.pos < end) {
                                             var tag = reader.uint32();
                                             switch (tag >>> 3) {
-                                            case 2:
-                                                message.regexMatch = reader.string();
-                                                break;
-                                            case 1:
-                                                message.headerName = reader.string();
-                                                break;
+                                            case 2: {
+                                                    message.regexMatch = reader.string();
+                                                    break;
+                                                }
+                                            case 1: {
+                                                    message.headerName = reader.string();
+                                                    break;
+                                                }
                                             default:
                                                 reader.skipType(tag & 7);
                                                 break;
@@ -1496,6 +1573,21 @@
                                      */
                                     HttpHeaderMatch.prototype.toJSON = function toJSON() {
                                         return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                                    };
+    
+                                    /**
+                                     * Gets the default type url for HttpHeaderMatch
+                                     * @function getTypeUrl
+                                     * @memberof google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch
+                                     * @static
+                                     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                                     * @returns {string} The default type url
+                                     */
+                                    HttpHeaderMatch.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                        if (typeUrlPrefix === undefined) {
+                                            typeUrlPrefix = "type.googleapis.com";
+                                        }
+                                        return typeUrlPrefix + "/google.cloud.networksecurity.v1.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch";
                                     };
     
                                     return HttpHeaderMatch;
@@ -1640,15 +1732,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.pageSize = reader.int32();
-                                    break;
-                                case 3:
-                                    message.pageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.pageSize = reader.int32();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.pageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -1753,6 +1848,21 @@
                          */
                         ListAuthorizationPoliciesRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for ListAuthorizationPoliciesRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListAuthorizationPoliciesRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListAuthorizationPoliciesRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListAuthorizationPoliciesRequest";
                         };
     
                         return ListAuthorizationPoliciesRequest;
@@ -1863,14 +1973,16 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    if (!(message.authorizationPolicies && message.authorizationPolicies.length))
-                                        message.authorizationPolicies = [];
-                                    message.authorizationPolicies.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32()));
-                                    break;
-                                case 2:
-                                    message.nextPageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        if (!(message.authorizationPolicies && message.authorizationPolicies.length))
+                                            message.authorizationPolicies = [];
+                                        message.authorizationPolicies.push($root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32()));
+                                        break;
+                                    }
+                                case 2: {
+                                        message.nextPageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -1986,6 +2098,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ListAuthorizationPoliciesResponse
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListAuthorizationPoliciesResponse
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListAuthorizationPoliciesResponse.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListAuthorizationPoliciesResponse";
+                        };
+    
                         return ListAuthorizationPoliciesResponse;
                     })();
     
@@ -2081,9 +2208,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -2171,6 +2299,21 @@
                          */
                         GetAuthorizationPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for GetAuthorizationPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.GetAuthorizationPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        GetAuthorizationPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.GetAuthorizationPolicyRequest";
                         };
     
                         return GetAuthorizationPolicyRequest;
@@ -2290,15 +2433,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.authorizationPolicyId = reader.string();
-                                    break;
-                                case 3:
-                                    message.authorizationPolicy = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.authorizationPolicyId = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.authorizationPolicy = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -2410,6 +2556,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for CreateAuthorizationPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.CreateAuthorizationPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        CreateAuthorizationPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.CreateAuthorizationPolicyRequest";
+                        };
+    
                         return CreateAuthorizationPolicyRequest;
                     })();
     
@@ -2516,12 +2677,14 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
-                                    break;
-                                case 2:
-                                    message.authorizationPolicy = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 2: {
+                                        message.authorizationPolicy = $root.google.cloud.networksecurity.v1.AuthorizationPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -2630,6 +2793,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for UpdateAuthorizationPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.UpdateAuthorizationPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        UpdateAuthorizationPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.UpdateAuthorizationPolicyRequest";
+                        };
+    
                         return UpdateAuthorizationPolicyRequest;
                     })();
     
@@ -2725,9 +2903,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -2815,6 +2994,21 @@
                          */
                         DeleteAuthorizationPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for DeleteAuthorizationPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.DeleteAuthorizationPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        DeleteAuthorizationPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.DeleteAuthorizationPolicyRequest";
                         };
     
                         return DeleteAuthorizationPolicyRequest;
@@ -2993,51 +3187,59 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
-                                case 2:
-                                    message.description = reader.string();
-                                    break;
-                                case 3:
-                                    message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 4:
-                                    message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 5:
-                                    if (message.labels === $util.emptyObject)
-                                        message.labels = {};
-                                    var end2 = reader.uint32() + reader.pos;
-                                    key = "";
-                                    value = "";
-                                    while (reader.pos < end2) {
-                                        var tag2 = reader.uint32();
-                                        switch (tag2 >>> 3) {
-                                        case 1:
-                                            key = reader.string();
-                                            break;
-                                        case 2:
-                                            value = reader.string();
-                                            break;
-                                        default:
-                                            reader.skipType(tag2 & 7);
-                                            break;
-                                        }
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
                                     }
-                                    message.labels[key] = value;
-                                    break;
-                                case 6:
-                                    message.sni = reader.string();
-                                    break;
-                                case 7:
-                                    message.clientCertificate = $root.google.cloud.networksecurity.v1.CertificateProvider.decode(reader, reader.uint32());
-                                    break;
-                                case 8:
-                                    if (!(message.serverValidationCa && message.serverValidationCa.length))
-                                        message.serverValidationCa = [];
-                                    message.serverValidationCa.push($root.google.cloud.networksecurity.v1.ValidationCA.decode(reader, reader.uint32()));
-                                    break;
+                                case 2: {
+                                        message.description = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 4: {
+                                        message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 5: {
+                                        if (message.labels === $util.emptyObject)
+                                            message.labels = {};
+                                        var end2 = reader.uint32() + reader.pos;
+                                        key = "";
+                                        value = "";
+                                        while (reader.pos < end2) {
+                                            var tag2 = reader.uint32();
+                                            switch (tag2 >>> 3) {
+                                            case 1:
+                                                key = reader.string();
+                                                break;
+                                            case 2:
+                                                value = reader.string();
+                                                break;
+                                            default:
+                                                reader.skipType(tag2 & 7);
+                                                break;
+                                            }
+                                        }
+                                        message.labels[key] = value;
+                                        break;
+                                    }
+                                case 6: {
+                                        message.sni = reader.string();
+                                        break;
+                                    }
+                                case 7: {
+                                        message.clientCertificate = $root.google.cloud.networksecurity.v1.CertificateProvider.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 8: {
+                                        if (!(message.serverValidationCa && message.serverValidationCa.length))
+                                            message.serverValidationCa = [];
+                                        message.serverValidationCa.push($root.google.cloud.networksecurity.v1.ValidationCA.decode(reader, reader.uint32()));
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -3232,6 +3434,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ClientTlsPolicy
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ClientTlsPolicy
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ClientTlsPolicy.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ClientTlsPolicy";
+                        };
+    
                         return ClientTlsPolicy;
                     })();
     
@@ -3349,15 +3566,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.pageSize = reader.int32();
-                                    break;
-                                case 3:
-                                    message.pageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.pageSize = reader.int32();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.pageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -3462,6 +3682,21 @@
                          */
                         ListClientTlsPoliciesRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for ListClientTlsPoliciesRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListClientTlsPoliciesRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListClientTlsPoliciesRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListClientTlsPoliciesRequest";
                         };
     
                         return ListClientTlsPoliciesRequest;
@@ -3572,14 +3807,16 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    if (!(message.clientTlsPolicies && message.clientTlsPolicies.length))
-                                        message.clientTlsPolicies = [];
-                                    message.clientTlsPolicies.push($root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32()));
-                                    break;
-                                case 2:
-                                    message.nextPageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        if (!(message.clientTlsPolicies && message.clientTlsPolicies.length))
+                                            message.clientTlsPolicies = [];
+                                        message.clientTlsPolicies.push($root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32()));
+                                        break;
+                                    }
+                                case 2: {
+                                        message.nextPageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -3695,6 +3932,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ListClientTlsPoliciesResponse
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListClientTlsPoliciesResponse
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListClientTlsPoliciesResponse.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListClientTlsPoliciesResponse";
+                        };
+    
                         return ListClientTlsPoliciesResponse;
                     })();
     
@@ -3790,9 +4042,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -3880,6 +4133,21 @@
                          */
                         GetClientTlsPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for GetClientTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.GetClientTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        GetClientTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.GetClientTlsPolicyRequest";
                         };
     
                         return GetClientTlsPolicyRequest;
@@ -3999,15 +4267,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.clientTlsPolicyId = reader.string();
-                                    break;
-                                case 3:
-                                    message.clientTlsPolicy = $root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.clientTlsPolicyId = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.clientTlsPolicy = $root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -4119,6 +4390,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for CreateClientTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.CreateClientTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        CreateClientTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.CreateClientTlsPolicyRequest";
+                        };
+    
                         return CreateClientTlsPolicyRequest;
                     })();
     
@@ -4225,12 +4511,14 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
-                                    break;
-                                case 2:
-                                    message.clientTlsPolicy = $root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 2: {
+                                        message.clientTlsPolicy = $root.google.cloud.networksecurity.v1.ClientTlsPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -4339,6 +4627,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for UpdateClientTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.UpdateClientTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        UpdateClientTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.UpdateClientTlsPolicyRequest";
+                        };
+    
                         return UpdateClientTlsPolicyRequest;
                     })();
     
@@ -4434,9 +4737,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -4524,6 +4828,21 @@
                          */
                         DeleteClientTlsPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for DeleteClientTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.DeleteClientTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        DeleteClientTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.DeleteClientTlsPolicyRequest";
                         };
     
                         return DeleteClientTlsPolicyRequest;
@@ -4621,9 +4940,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.targetUri = reader.string();
-                                    break;
+                                case 1: {
+                                        message.targetUri = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -4711,6 +5031,21 @@
                          */
                         GrpcEndpoint.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for GrpcEndpoint
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.GrpcEndpoint
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        GrpcEndpoint.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.GrpcEndpoint";
                         };
     
                         return GrpcEndpoint;
@@ -4833,12 +5168,14 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 2:
-                                    message.grpcEndpoint = $root.google.cloud.networksecurity.v1.GrpcEndpoint.decode(reader, reader.uint32());
-                                    break;
-                                case 3:
-                                    message.certificateProviderInstance = $root.google.cloud.networksecurity.v1.CertificateProviderInstance.decode(reader, reader.uint32());
-                                    break;
+                                case 2: {
+                                        message.grpcEndpoint = $root.google.cloud.networksecurity.v1.GrpcEndpoint.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 3: {
+                                        message.certificateProviderInstance = $root.google.cloud.networksecurity.v1.CertificateProviderInstance.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -4958,6 +5295,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ValidationCA
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ValidationCA
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ValidationCA.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ValidationCA";
+                        };
+    
                         return ValidationCA;
                     })();
     
@@ -5053,9 +5405,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.pluginInstance = reader.string();
-                                    break;
+                                case 1: {
+                                        message.pluginInstance = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -5143,6 +5496,21 @@
                          */
                         CertificateProviderInstance.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for CertificateProviderInstance
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.CertificateProviderInstance
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        CertificateProviderInstance.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.CertificateProviderInstance";
                         };
     
                         return CertificateProviderInstance;
@@ -5265,12 +5633,14 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 2:
-                                    message.grpcEndpoint = $root.google.cloud.networksecurity.v1.GrpcEndpoint.decode(reader, reader.uint32());
-                                    break;
-                                case 3:
-                                    message.certificateProviderInstance = $root.google.cloud.networksecurity.v1.CertificateProviderInstance.decode(reader, reader.uint32());
-                                    break;
+                                case 2: {
+                                        message.grpcEndpoint = $root.google.cloud.networksecurity.v1.GrpcEndpoint.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 3: {
+                                        message.certificateProviderInstance = $root.google.cloud.networksecurity.v1.CertificateProviderInstance.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -5388,6 +5758,21 @@
                          */
                         CertificateProvider.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for CertificateProvider
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.CertificateProvider
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        CertificateProvider.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.CertificateProvider";
                         };
     
                         return CertificateProvider;
@@ -5551,27 +5936,34 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 2:
-                                    message.endTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 3:
-                                    message.target = reader.string();
-                                    break;
-                                case 4:
-                                    message.verb = reader.string();
-                                    break;
-                                case 5:
-                                    message.statusMessage = reader.string();
-                                    break;
-                                case 6:
-                                    message.requestedCancellation = reader.bool();
-                                    break;
-                                case 7:
-                                    message.apiVersion = reader.string();
-                                    break;
+                                case 1: {
+                                        message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 2: {
+                                        message.endTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 3: {
+                                        message.target = reader.string();
+                                        break;
+                                    }
+                                case 4: {
+                                        message.verb = reader.string();
+                                        break;
+                                    }
+                                case 5: {
+                                        message.statusMessage = reader.string();
+                                        break;
+                                    }
+                                case 6: {
+                                        message.requestedCancellation = reader.bool();
+                                        break;
+                                    }
+                                case 7: {
+                                        message.apiVersion = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -5720,6 +6112,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for OperationMetadata
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.OperationMetadata
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        OperationMetadata.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.OperationMetadata";
+                        };
+    
                         return OperationMetadata;
                     })();
     
@@ -5756,7 +6163,7 @@
                         };
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listAuthorizationPolicies}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listAuthorizationPolicies}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef ListAuthorizationPoliciesCallback
                          * @type {function}
@@ -5789,7 +6196,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getAuthorizationPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getAuthorizationPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef GetAuthorizationPolicyCallback
                          * @type {function}
@@ -5822,7 +6229,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createAuthorizationPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createAuthorizationPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef CreateAuthorizationPolicyCallback
                          * @type {function}
@@ -5855,7 +6262,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateAuthorizationPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateAuthorizationPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef UpdateAuthorizationPolicyCallback
                          * @type {function}
@@ -5888,7 +6295,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteAuthorizationPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteAuthorizationPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef DeleteAuthorizationPolicyCallback
                          * @type {function}
@@ -5921,7 +6328,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listServerTlsPolicies}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listServerTlsPolicies}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef ListServerTlsPoliciesCallback
                          * @type {function}
@@ -5954,7 +6361,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getServerTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getServerTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef GetServerTlsPolicyCallback
                          * @type {function}
@@ -5987,7 +6394,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createServerTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createServerTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef CreateServerTlsPolicyCallback
                          * @type {function}
@@ -6020,7 +6427,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateServerTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateServerTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef UpdateServerTlsPolicyCallback
                          * @type {function}
@@ -6053,7 +6460,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteServerTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteServerTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef DeleteServerTlsPolicyCallback
                          * @type {function}
@@ -6086,7 +6493,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#listClientTlsPolicies}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|listClientTlsPolicies}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef ListClientTlsPoliciesCallback
                          * @type {function}
@@ -6119,7 +6526,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#getClientTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|getClientTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef GetClientTlsPolicyCallback
                          * @type {function}
@@ -6152,7 +6559,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#createClientTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|createClientTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef CreateClientTlsPolicyCallback
                          * @type {function}
@@ -6185,7 +6592,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#updateClientTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|updateClientTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef UpdateClientTlsPolicyCallback
                          * @type {function}
@@ -6218,7 +6625,7 @@
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity#deleteClientTlsPolicy}.
+                         * Callback as used by {@link google.cloud.networksecurity.v1.NetworkSecurity|deleteClientTlsPolicy}.
                          * @memberof google.cloud.networksecurity.v1.NetworkSecurity
                          * @typedef DeleteClientTlsPolicyCallback
                          * @type {function}
@@ -6424,49 +6831,57 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
-                                case 2:
-                                    message.description = reader.string();
-                                    break;
-                                case 3:
-                                    message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 4:
-                                    message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
-                                    break;
-                                case 5:
-                                    if (message.labels === $util.emptyObject)
-                                        message.labels = {};
-                                    var end2 = reader.uint32() + reader.pos;
-                                    key = "";
-                                    value = "";
-                                    while (reader.pos < end2) {
-                                        var tag2 = reader.uint32();
-                                        switch (tag2 >>> 3) {
-                                        case 1:
-                                            key = reader.string();
-                                            break;
-                                        case 2:
-                                            value = reader.string();
-                                            break;
-                                        default:
-                                            reader.skipType(tag2 & 7);
-                                            break;
-                                        }
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
                                     }
-                                    message.labels[key] = value;
-                                    break;
-                                case 6:
-                                    message.allowOpen = reader.bool();
-                                    break;
-                                case 7:
-                                    message.serverCertificate = $root.google.cloud.networksecurity.v1.CertificateProvider.decode(reader, reader.uint32());
-                                    break;
-                                case 8:
-                                    message.mtlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.MTLSPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 2: {
+                                        message.description = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 4: {
+                                        message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 5: {
+                                        if (message.labels === $util.emptyObject)
+                                            message.labels = {};
+                                        var end2 = reader.uint32() + reader.pos;
+                                        key = "";
+                                        value = "";
+                                        while (reader.pos < end2) {
+                                            var tag2 = reader.uint32();
+                                            switch (tag2 >>> 3) {
+                                            case 1:
+                                                key = reader.string();
+                                                break;
+                                            case 2:
+                                                value = reader.string();
+                                                break;
+                                            default:
+                                                reader.skipType(tag2 & 7);
+                                                break;
+                                            }
+                                        }
+                                        message.labels[key] = value;
+                                        break;
+                                    }
+                                case 6: {
+                                        message.allowOpen = reader.bool();
+                                        break;
+                                    }
+                                case 7: {
+                                        message.serverCertificate = $root.google.cloud.networksecurity.v1.CertificateProvider.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 8: {
+                                        message.mtlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.MTLSPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -6648,6 +7063,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ServerTlsPolicy
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ServerTlsPolicy
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ServerTlsPolicy.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ServerTlsPolicy";
+                        };
+    
                         ServerTlsPolicy.MTLSPolicy = (function() {
     
                             /**
@@ -6742,11 +7172,12 @@
                                 while (reader.pos < end) {
                                     var tag = reader.uint32();
                                     switch (tag >>> 3) {
-                                    case 1:
-                                        if (!(message.clientValidationCa && message.clientValidationCa.length))
-                                            message.clientValidationCa = [];
-                                        message.clientValidationCa.push($root.google.cloud.networksecurity.v1.ValidationCA.decode(reader, reader.uint32()));
-                                        break;
+                                    case 1: {
+                                            if (!(message.clientValidationCa && message.clientValidationCa.length))
+                                                message.clientValidationCa = [];
+                                            message.clientValidationCa.push($root.google.cloud.networksecurity.v1.ValidationCA.decode(reader, reader.uint32()));
+                                            break;
+                                        }
                                     default:
                                         reader.skipType(tag & 7);
                                         break;
@@ -6851,6 +7282,21 @@
                              */
                             MTLSPolicy.prototype.toJSON = function toJSON() {
                                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            /**
+                             * Gets the default type url for MTLSPolicy
+                             * @function getTypeUrl
+                             * @memberof google.cloud.networksecurity.v1.ServerTlsPolicy.MTLSPolicy
+                             * @static
+                             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns {string} The default type url
+                             */
+                            MTLSPolicy.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                if (typeUrlPrefix === undefined) {
+                                    typeUrlPrefix = "type.googleapis.com";
+                                }
+                                return typeUrlPrefix + "/google.cloud.networksecurity.v1.ServerTlsPolicy.MTLSPolicy";
                             };
     
                             return MTLSPolicy;
@@ -6973,15 +7419,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.pageSize = reader.int32();
-                                    break;
-                                case 3:
-                                    message.pageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.pageSize = reader.int32();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.pageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -7086,6 +7535,21 @@
                          */
                         ListServerTlsPoliciesRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for ListServerTlsPoliciesRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListServerTlsPoliciesRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListServerTlsPoliciesRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListServerTlsPoliciesRequest";
                         };
     
                         return ListServerTlsPoliciesRequest;
@@ -7196,14 +7660,16 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    if (!(message.serverTlsPolicies && message.serverTlsPolicies.length))
-                                        message.serverTlsPolicies = [];
-                                    message.serverTlsPolicies.push($root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32()));
-                                    break;
-                                case 2:
-                                    message.nextPageToken = reader.string();
-                                    break;
+                                case 1: {
+                                        if (!(message.serverTlsPolicies && message.serverTlsPolicies.length))
+                                            message.serverTlsPolicies = [];
+                                        message.serverTlsPolicies.push($root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32()));
+                                        break;
+                                    }
+                                case 2: {
+                                        message.nextPageToken = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -7319,6 +7785,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for ListServerTlsPoliciesResponse
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.ListServerTlsPoliciesResponse
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        ListServerTlsPoliciesResponse.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.ListServerTlsPoliciesResponse";
+                        };
+    
                         return ListServerTlsPoliciesResponse;
                     })();
     
@@ -7414,9 +7895,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -7504,6 +7986,21 @@
                          */
                         GetServerTlsPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for GetServerTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.GetServerTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        GetServerTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.GetServerTlsPolicyRequest";
                         };
     
                         return GetServerTlsPolicyRequest;
@@ -7623,15 +8120,18 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.parent = reader.string();
-                                    break;
-                                case 2:
-                                    message.serverTlsPolicyId = reader.string();
-                                    break;
-                                case 3:
-                                    message.serverTlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.parent = reader.string();
+                                        break;
+                                    }
+                                case 2: {
+                                        message.serverTlsPolicyId = reader.string();
+                                        break;
+                                    }
+                                case 3: {
+                                        message.serverTlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -7743,6 +8243,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for CreateServerTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.CreateServerTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        CreateServerTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.CreateServerTlsPolicyRequest";
+                        };
+    
                         return CreateServerTlsPolicyRequest;
                     })();
     
@@ -7849,12 +8364,14 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
-                                    break;
-                                case 2:
-                                    message.serverTlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32());
-                                    break;
+                                case 1: {
+                                        message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
+                                        break;
+                                    }
+                                case 2: {
+                                        message.serverTlsPolicy = $root.google.cloud.networksecurity.v1.ServerTlsPolicy.decode(reader, reader.uint32());
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -7963,6 +8480,21 @@
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
     
+                        /**
+                         * Gets the default type url for UpdateServerTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.UpdateServerTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        UpdateServerTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.UpdateServerTlsPolicyRequest";
+                        };
+    
                         return UpdateServerTlsPolicyRequest;
                     })();
     
@@ -8058,9 +8590,10 @@
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
-                                case 1:
-                                    message.name = reader.string();
-                                    break;
+                                case 1: {
+                                        message.name = reader.string();
+                                        break;
+                                    }
                                 default:
                                     reader.skipType(tag & 7);
                                     break;
@@ -8148,6 +8681,21 @@
                          */
                         DeleteServerTlsPolicyRequest.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+    
+                        /**
+                         * Gets the default type url for DeleteServerTlsPolicyRequest
+                         * @function getTypeUrl
+                         * @memberof google.cloud.networksecurity.v1.DeleteServerTlsPolicyRequest
+                         * @static
+                         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns {string} The default type url
+                         */
+                        DeleteServerTlsPolicyRequest.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                            if (typeUrlPrefix === undefined) {
+                                typeUrlPrefix = "type.googleapis.com";
+                            }
+                            return typeUrlPrefix + "/google.cloud.networksecurity.v1.DeleteServerTlsPolicyRequest";
                         };
     
                         return DeleteServerTlsPolicyRequest;
